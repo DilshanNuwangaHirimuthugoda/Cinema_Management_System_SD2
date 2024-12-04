@@ -1,4 +1,5 @@
 #Cinema Management System - SD2 Project
+
 This project is a Cinema Management System developed in Java. It provides functionalities for managing cinema seat bookings, including:
 
 Buying tickets.
