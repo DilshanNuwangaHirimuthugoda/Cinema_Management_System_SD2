@@ -1,0 +1,65 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+
+public class w2053199_CinemaManagement {
+        //Seat_plane Array
+        static int[][] seatPlan = new int[3][16];
+        //user_information Array
+        static Ticket[][] user_information = new Ticket[3][16];
+
+        //main_method
+        public static void main(String arg[]) {
+            Scanner select_option;
+
+            while (true) {
+                System.out.println();
+                System.out.println("  ‘Welcome to The London Lumiere’ ");
+                System.out.println();
+                System.out.println("----------------------------------------------");
+                System.out.println("Please_Select_an_Option ");
+                System.out.println(" 1) Buy_A_Ticket");
+                System.out.println(" 2) Cancel_Ticket");
+                System.out.println(" 3) See_Seating_Plan");
+                System.out.println(" 4) Find_First_Seat_Available");
+                System.out.println(" 5) Print_Tickets_Information_And_Total_Prices");
+                System.out.println(" 6) Search_Ticket");
+                System.out.println(" 7) Sort_Tickets_By_Price");
+                System.out.println(" 8) Exit");
+                System.out.println("----------------------------------------------");
+                select_option = new Scanner(System.in);
+                try {
+                    System.out.print(" Select an Option : ");
+//Option switch case
+                    int Selected_Option = select_option.nextInt();
+                    switch (Selected_Option) {
+                        case 1:
+                            buy_ticket();
+                            break;
+                        case 2:
+                            cancel_ticket();
+                            break;
+                        case 3:
+                            print_seating_area();
+                            break;
+                        case 4:
+                            find_first_available();
+                            break;
+                        case 5:
+                            print_tickets_info();
+                            break;
+                        case 6:
+                            search_ticket();
+                            break;
+                        case 7:
+                            sort_tickets();
+                            break;
+                        case 8:
+                            System.out.println();
+                            System.out.println(" Exit the Program & GOOD BYE... ");
+                            System.exit(8);
+                        default:
+                            System.out.println("Invalid option ");
+
+
+                    }
